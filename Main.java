@@ -2,20 +2,24 @@ public class Main
 {
   public static void main(String[] args)
   {
-    final int a = 1; //cant be changed
-    double b = 3.4; 
-    boolean c = true;
-
-    System.out.print("A: ");
-    System.out.println(a);
-    System.out.print("B: ");
-    System.out.println(b);
-    System.out.print("C: ");
+    int a = 5;
+    double b = 2.3f; //casted from f to double
+    int c = 19;
+    int bad = 0;
+    c++;
+    System.out.print("Current Version of C++ is ");
     System.out.println(c);
 
-    System.out.print("A + B: ");
-    System.out.println(a + b); //implicit casting
+    a+=8;
+    System.out.print("5+8= ");
+    System.out.println(a);
 
+    try {
+      int num = ((int) b) / bad;
+      System.out.println("I divded num by 0 lol");
+    } catch(ArithmeticException e) {
+      System.out.println("Failure when I was ur age I divided any numbers by 0");
+    }
     
   }
 }
